@@ -1,0 +1,16 @@
+input.textField{
+    display: block;
+    margin: 0 auto;
+    width: 480px;
+    height: 48px;
+    padding: 0 var(--spacing);
+    font-size: 1.0rem;
+}
+
+input.textField:placeholder-shown{
+    text-align: center;
+}
+
+input.textField:focus{
+    outline: 2px solid var(--primaryColor);
+}

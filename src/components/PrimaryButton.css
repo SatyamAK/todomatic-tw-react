@@ -1,0 +1,11 @@
+button.PrimaryButton{
+    display: inline-block;
+    background-color: var(--primaryColor);
+    width: 480px;
+    height: 48px;
+    display: block;
+    margin: var(--spacing) auto;
+    padding: 0 var(--spacing);
+    color: var(--textColor);
+    font-size: var(--butonText);
+}

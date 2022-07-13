@@ -1,7 +1,11 @@
 import Heading from "../components/Heading";
+import ToDoForm from "../components/ToDoForm";
 
 export default function Todo(){
     return(
-        <Heading heading = "ToDoMatic" />
+        <div className="toDo">
+            <Heading heading = "ToDoMatic" />
+            <ToDoForm />
+        </div>
     );
 }
