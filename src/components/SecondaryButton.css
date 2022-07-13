@@ -1,0 +1,17 @@
+button.secondary-button{
+    display: block;
+    background-color: var(--secondaryColor);
+    width: 40%;
+    height: 36px;
+    margin: var(--spacing) auto;
+    padding: var(--spacing);
+    color: var(--primaryColor);
+    font-size: var(--butonText);
+    border: 2px solid var(--primaryColor);
+}
+
+@media screen and (max-width:800px) {
+    button.secondary-button{
+        width: 35%;
+    }
+}

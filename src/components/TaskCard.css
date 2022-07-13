@@ -1,0 +1,44 @@
+.task-card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--textColor);
+    align-items: center;
+}
+
+.task-status{
+    display: inherit;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 35%;
+}
+
+.buttons-container{
+    display: inherit;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 35%;
+    margin: var(--spacingLarge);
+}
+
+input{
+    height: 24px;
+    width: 24px;
+    margin-right: var(--spacing);
+}
+
+.task-name{
+    font-size: var(--title);
+}
+
+@media screen and (max-width:800px) {
+    .task-status{
+        margin: 0 var(--spacingLarge);
+        width: 80%;
+    }
+    
+    .buttons-container{
+        width: 80%;
+        margin: var(--spacingLarge);
+    }
+}

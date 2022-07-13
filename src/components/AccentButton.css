@@ -1,0 +1,16 @@
+button.accent-button{
+    display: inline;
+    background-color: var(--accentColor);
+    width: 40%;
+    height: 36px;
+    margin: var(--spacing) auto;
+    padding: var(--spacing);
+    color: var(--textColor);
+    font-size: var(--butonText);
+}
+
+@media screen and (max-width:800px) {
+    button.accent-button{
+        width: 35%;
+    }
+}
