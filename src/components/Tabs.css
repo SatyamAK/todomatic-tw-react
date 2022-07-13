@@ -1,0 +1,12 @@
+.Tab, .Tab-Active{
+    display: inline-block;
+    margin: 0 var(--spacingExtraLarge);
+    color: var(--textColor);
+    font-size: var(--buttonText);
+    border-bottom: 4px solid var(--secondaryColor);
+}
+
+.Tab-Active{
+    border-bottom: 4px solid var(--primaryColor);
+    color: var(--primaryColor);
+}
