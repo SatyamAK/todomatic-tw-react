@@ -1,13 +1,13 @@
 import './Todo.css';
 import Heading from "../components/Heading";
-import ToDoForm from "../components/ToDoForm";
+import TodoForm from "../components/TodoForm";
 import Tabs from "../components/Tabs";
 
 export default function Todo(){
     return(
-        <div className="toDo">
+        <div className="todo">
             <Heading heading = "ToDoMatic" />
-            <ToDoForm />
+            <TodoForm />
             <Tabs />
         </div>
     );

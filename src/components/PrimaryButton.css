@@ -1,4 +1,4 @@
-button.PrimaryButton{
+button.primary-button{
     display: inline-block;
     background-color: var(--primaryColor);
     width: 35%;
@@ -11,7 +11,7 @@ button.PrimaryButton{
 }
 
 @media screen and (max-width:800px) {
-    button.PrimaryButton{
+    button.primary-button{
         width: 80%;
     }
 }
