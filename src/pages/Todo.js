@@ -1,3 +1,4 @@
+import './Todo.css';
 import Heading from "../components/Heading";
 import ToDoForm from "../components/ToDoForm";
 import Tabs from "../components/Tabs";

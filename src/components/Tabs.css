@@ -1,5 +1,12 @@
+.Tabs{
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+}
 .Tab, .Tab-Active{
     display: inline-block;
+    width: 100px;
+    text-align: center;
     margin: 0 var(--spacingExtraLarge);
     color: var(--textColor);
     font-size: var(--buttonText);
@@ -9,4 +16,10 @@
 .Tab-Active{
     border-bottom: 4px solid var(--primaryColor);
     color: var(--primaryColor);
+}
+
+@media screen and (max-width:800px) {
+    .Tab, .Tab-Active{
+        margin: 0 var(--spacingLarge);
+    }
 }
