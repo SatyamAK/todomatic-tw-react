@@ -21,7 +21,6 @@ export function getAllTasks(){
 export function toggleTaskDoneOrNot(taskId){
     allTasks = tasks.map(task => {
         if(task.id === taskId){
-            console.log(task.isDone)
             task.isDone = !task.isDone
         }
 
