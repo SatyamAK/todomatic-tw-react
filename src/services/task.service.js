@@ -20,7 +20,7 @@ export function getAllTasks(){
 }
 
 export function toggleTaskDoneOrNot(taskId){
-    allTasks = tasks.map(task => {
+    allTasks = allTasks.map(task => {
         if(task.id === taskId){
             task.isDone = !task.isDone
         }
