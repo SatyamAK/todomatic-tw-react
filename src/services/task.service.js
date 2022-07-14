@@ -1,10 +1,11 @@
 import Task from "../models/task.model";
 import tasks from '../dummy json/tasks.json';
 
-var allTasks = []
+var allTasks = undefined
 
 export function getAllTasks(){
-    if(allTasks === undefined || allTasks.length === 0){
+    if(allTasks === undefined){
+        allTasks = []
         tasks.map(
             (task) => allTasks.push(
                 new Task(
@@ -37,4 +38,10 @@ export function addTask(taskTitle){
     allTasks.push(newTask)
 
     return newTask
+}
+
+export function deleteTask(taskId){
+    allTasks = allTasks.filter((task)=>task.id!=taskId)
+
+    return allTasks
 }

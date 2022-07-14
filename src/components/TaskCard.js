@@ -16,7 +16,7 @@ export default function TaskCard(props){
             </div>
             <div className='buttons-container'>
                 <SecondaryButton title="Edit" />
-                <AccentButton title="Accent"/>
+                <AccentButton title="Delete" onClick={()=> props.delTask(props.task.id)} />
             </div>
         </div>
     );
