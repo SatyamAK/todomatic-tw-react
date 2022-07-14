@@ -1,11 +1,11 @@
 import './TaskList.css'
 import TaskCard from "./TaskCard";
 
-export default function TaskcardList(){
+export default function TaskcardList(props){
+    const taskList = props.taskList.map(task => <TaskCard task={task} key={task.id} />)
     return (
         <div className="task-list">
-            <TaskCard />
-            <TaskCard />
+            { taskList }
         </div>
     );
 }
