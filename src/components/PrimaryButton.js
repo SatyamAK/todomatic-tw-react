@@ -2,6 +2,6 @@ import './PrimaryButton.css';
 
 export default function PrimaryButton(props){
     return(
-        <button type='button' className='primary-button' >{props.title}</button>
+        <button type={props.type} className='primary-button' onClick = {props.onClick}>{props.title}</button>
     );
 }
