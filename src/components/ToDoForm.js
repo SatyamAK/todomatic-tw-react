@@ -8,6 +8,12 @@ export default function ToDoForm(props){
     const [name, setName] = useState("")
 
     function handleSubmit(event){
+
+        if(name==""){
+            event.preventDefault()
+            return
+        }
+
         event.preventDefault()
         props.addNewTask(name)
         setName("")
