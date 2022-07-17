@@ -3,7 +3,6 @@ button.accent-button{
     background-color: var(--accentColor);
     width: 40%;
     height: 36px;
-    margin: var(--spacing) auto;
     padding: var(--spacing);
     color: var(--textColor);
     font-size: var(--butonText);

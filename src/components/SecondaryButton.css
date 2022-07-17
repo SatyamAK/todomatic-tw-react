@@ -3,7 +3,6 @@ button.secondary-button{
     background-color: var(--secondaryColor);
     width: 40%;
     height: 36px;
-    margin: var(--spacing) auto;
     padding: var(--spacing);
     color: var(--primaryColor);
     font-size: var(--butonText);

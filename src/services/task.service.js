@@ -37,11 +37,23 @@ export function addTask(taskTitle){
     let newTask = new Task(lastIndex+1, taskTitle, false)
     allTasks.push(newTask)
 
-    return newTask
+    return allTasks
 }
 
 export function deleteTask(taskId){
-    allTasks = allTasks.filter((task)=>task.id!=taskId)
+    allTasks = allTasks.filter((task)=>task.id!==taskId)
+
+    return allTasks
+}
+
+export function editTask(taskId, taskName){
+    allTasks = allTasks.map(task =>{
+        if(task.id === taskId){
+            task.title = taskName
+        }
+
+        return task
+    })
 
     return allTasks
 }

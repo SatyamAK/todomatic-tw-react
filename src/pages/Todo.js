@@ -3,12 +3,12 @@ import Heading from "../components/Heading";
 import TodoForm from "../components/TodoForm";
 import Tabs from "../components/Tabs";
 import TaskcardList from '../components/TaskList';
-import { getAllTasks, toggleTaskDoneOrNot, addTask, deleteTask } from '../services/task.service';
+import { getAllTasks, toggleTaskDoneOrNot, addTask, deleteTask, editTask } from '../services/task.service';
 import { useState } from 'react';
 
 export default function Todo(){
 
-    const [taskList, setTaskList] = useState(false)
+    const [taskList, setTaskList] = useState(getAllTasks())
 
     function toggleTask(taskId){
         let updatedTaskList = toggleTaskDoneOrNot(taskId)
@@ -17,11 +17,16 @@ export default function Todo(){
 
     function addNewTask(taskName){
         let updatedTaskList = addTask(taskName)
-        setTaskList(updatedTaskList)
+        setTaskList([... updatedTaskList])
     }
 
     function delTask(taskId){
         let updatedTaskList = deleteTask(taskId)
+        setTaskList(updatedTaskList)
+    }
+
+    function editATask(taskId, taskName){
+        let updatedTaskList = editTask(taskId, taskName)
         setTaskList(updatedTaskList)
     }
 
@@ -30,7 +35,11 @@ export default function Todo(){
             <Heading heading = "ToDoMatic" />
             <TodoForm addNewTask = {addNewTask}/>
             <Tabs />
-            <TaskcardList taskList = {getAllTasks()} toggleTaskDoneOrNot = {toggleTask} delTask = {delTask}/>
+            <TaskcardList 
+                taskList = {taskList} 
+                toggleTaskDoneOrNot = {toggleTask} 
+                delTask = {delTask}
+                editATask = {editATask}/>
         </div>
     );
 }
