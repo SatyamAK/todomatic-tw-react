@@ -3,16 +3,18 @@ import Heading from "../components/Heading";
 import TodoForm from "../components/TodoForm";
 import Tabs from "../components/Tabs";
 import TaskcardList from '../components/TaskList';
-import { getAllTasks, toggleTaskDoneOrNot, addTask, deleteTask, editTask } from '../services/task.service';
+import { getAllTasks, toggleTaskDoneOrNot, addTask, deleteTask, editTask, getActiveTask, getCompletedTask } from '../services/task.service';
 import { useState } from 'react';
 
 export default function Todo(){
 
     const [taskList, setTaskList] = useState(getAllTasks())
+    const [selectedTab, setSelectedTab] = useState("All")
 
     function toggleTask(taskId){
         let updatedTaskList = toggleTaskDoneOrNot(taskId)
         setTaskList(updatedTaskList)
+        setSelectedTab("All")
     }
 
     function addNewTask(taskName){
@@ -30,11 +32,31 @@ export default function Todo(){
         setTaskList(updatedTaskList)
     }
 
+    function applyFilter(filter){
+
+        if(filter === "Active"){
+            let activeTasks = getActiveTask()
+            setTaskList(activeTasks)
+        }
+
+        if(filter === "Completed"){
+            let completedTasks = getCompletedTask()
+            setTaskList(completedTasks)
+        }
+
+        if(filter === "All"){
+            let allTasks = getAllTasks()
+            setTaskList(allTasks)
+        }
+        
+        setSelectedTab(filter)
+    }
+
     return(
         <div className="todo">
             <Heading heading = "ToDoMatic" />
             <TodoForm addNewTask = {addNewTask}/>
-            <Tabs />
+            <Tabs selectedTab = {selectedTab} applyFilter = {applyFilter}/>
             <TaskcardList 
                 taskList = {taskList} 
                 toggleTaskDoneOrNot = {toggleTask} 

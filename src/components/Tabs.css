@@ -7,7 +7,7 @@
     display: inline-block;
     width: 100px;
     text-align: center;
-    margin: 0 var(--spacingExtraLarge);
+    margin: var(--spacingLarge) var(--spacingExtraLarge);
     color: var(--textColor);
     font-size: var(--buttonText);
     border-bottom: 4px solid var(--secondaryColor);
@@ -20,6 +20,6 @@
 
 @media screen and (max-width:800px) {
     .tab, .tab-active{
-        margin: 0 var(--spacingLarge);
+        margin: var(--spacingLarge) var(--spacingLarge);
     }
 }

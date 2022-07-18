@@ -57,3 +57,13 @@ export function editTask(taskId, taskName){
 
     return allTasks
 }
+
+export function getActiveTask(){
+    let activeTasks = allTasks.filter((task) => !task.isDone)
+    return activeTasks
+}
+
+export function getCompletedTask(){
+    let completdTasks = allTasks.filter((task) => task.isDone)
+    return completdTasks
+}
