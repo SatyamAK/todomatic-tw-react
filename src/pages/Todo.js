@@ -26,6 +26,7 @@ export default function Todo(){
     function delTask(taskId){
         let updatedTaskList = deleteTask(taskId)
         setTaskList(updatedTaskList)
+        setSelectedTab("All")
     }
 
     function editATask(taskId, taskName){
