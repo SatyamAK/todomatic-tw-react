@@ -45,7 +45,7 @@ input[type="text"]:focus{
 }
 
 .edit-container *{
-    margin: 0 var(--spacing);
+    margin: var(--spacing) var(--spacing);
 }
 
 .task-name{
@@ -54,7 +54,7 @@ input[type="text"]:focus{
 
 @media screen and (max-width:800px) {
     .task-status, .buttons-container, .edit-container{
-        margin: 4px var(--spacingLarge);
+        margin: var(--spacing) var(--spacingLarge);
         width: 80%;
     }
 }
