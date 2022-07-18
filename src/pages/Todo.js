@@ -31,6 +31,7 @@ export default function Todo(){
     function editATask(taskId, taskName){
         let updatedTaskList = editTask(taskId, taskName)
         setTaskList(updatedTaskList)
+        setSelectedTab("All")
     }
 
     function applyFilter(filter){
