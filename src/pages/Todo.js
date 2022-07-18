@@ -20,6 +20,7 @@ export default function Todo(){
     function addNewTask(taskName){
         let updatedTaskList = addTask(taskName)
         setTaskList([... updatedTaskList])
+        setSelectedTab("All")
     }
 
     function delTask(taskId){
@@ -48,7 +49,7 @@ export default function Todo(){
             let allTasks = getAllTasks()
             setTaskList(allTasks)
         }
-        
+
         setSelectedTab(filter)
     }
 
